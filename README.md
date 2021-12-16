@@ -8,4 +8,4 @@
 
 Typescript library provide many sweet tools.
 
-[Documentation](https://libsugar.github.io/sugar.js/modules.html)
+[Documentation](https://soralib.github.io/sa.js/modules.html)
