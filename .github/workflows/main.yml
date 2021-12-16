@@ -3,9 +3,6 @@ name: gen_doc
 
 on:
   push:
-    types: [published]
-    branches: [main]
-  
   release:
     types: [published]
     branches: [main]
