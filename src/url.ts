@@ -1,10 +1,10 @@
-import { isUrl } from "./validate";
+import { isUrl } from './validate';
 
 export interface UrlSplit {
-  root: string,
+  root: string;
   querys: {
-    [index: string]: string
-  }
+    [index: string]: string;
+  };
 }
 
 export function urlSplit(url: string): UrlSplit {
@@ -21,7 +21,7 @@ export function urlSplit(url: string): UrlSplit {
     for (const query of queryPath.split('&')) {
       const querySplit = query.split('=');
 
-      if(querySplit.length === 2) {
+      if (querySplit.length === 2) {
         split.querys[querySplit[0]] = querySplit[1];
       }
     }
