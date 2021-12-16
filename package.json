@@ -28,6 +28,7 @@
     "type": "git",
     "url": "git+https://github.com/soraLib/sa.js.git"
   },
+  "homepage": "https://github.com/soraLib/sa.js#readme",
   "devDependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",
