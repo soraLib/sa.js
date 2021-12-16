@@ -1,0 +1,15 @@
+node_modules/
+es/
+esm/
+type/
+cjs/
+umd/
+dist/
+lib/
+tsout/
+/sa.js
+/sa.mjs
+coverage/
+/publish
+/pack
+/dev
