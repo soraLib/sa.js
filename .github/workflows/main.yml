@@ -2,7 +2,7 @@
 name: gen_doc
 
 on:
-  release:
+  [push, release]:
     types: [published]
     branches: [main]
 
