@@ -2,7 +2,11 @@
 name: gen_doc
 
 on:
-  [push, release]:
+  push:
+    types: [published]
+    branches: [main]
+  
+  release:
     types: [published]
     branches: [main]
 
