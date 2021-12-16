@@ -20,10 +20,11 @@ export function isUpperCase(value: string) {
 }
 
 /** is start with upper case */
-export function startWidthUpperCase(value: string) {
-  const reg = /^[A-Za-z]+$/;
+export function isStartWithUpperCase(value: string) {
+  if(!value.length) return false;
 
-  return reg.test(value);
+  const reg = /[A-Z]/;
+  return reg.test(value[0]);
 }
 
 
@@ -71,23 +72,12 @@ export function isEmail(value: string) {
   return reg.test(value);
 }
 
-/** is blank */
-export function isBlank(value: string) {
-  return (
-    value == null ||
-    false ||
-    value === '' ||
-    value.trim() === '' ||
-    value.toLocaleLowerCase().trim() === 'null'
-  );
-}
-
 /** is json */
-export function isJson(value: string): boolean {
-  if (typeof value == 'string') {
+export function isJson<T>(value: T): boolean {
+  if (typeof value === 'string') {
     try {
       const obj = JSON.parse(value);
-      if (typeof obj == 'object' && obj) {
+      if (typeof obj === 'object' && obj) {
         return true;
       } else {
         return false;
