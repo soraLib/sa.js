@@ -13,7 +13,8 @@
     "babel": "babel",
     "rollup": "rollup",
     "build": "darl build",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "prepare": "husky install"
   },
   "keywords": [
     "typescript",
@@ -33,10 +34,13 @@
     "@babel/plugin-transform-modules-umd": "^7.14.5",
     "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.7",
+    "@commitlint/config-conventional": "^15.0.0",
     "@rollup/plugin-typescript": "^8.2.1",
     "@types/jest": "^26.0.19",
     "babel-plugin-add-import-extension": "^1.5.1",
+    "commitlint": "^15.0.0",
     "darl": "^2.1.1",
+    "husky": "^7.0.4",
     "jest": "^26.6.3",
     "ncp": "^2.0.0",
     "rollup": "^2.35.1",
