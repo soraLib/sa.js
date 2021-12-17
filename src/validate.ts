@@ -29,7 +29,7 @@ export function isStartWithUpperCase(value: string) {
 
 
 /** is array */
-export function isArray<T>(value: T) {
+export function isArray(value: any): value is Array<any> {
   if (typeof Array.isArray === 'undefined') {
     return Object.prototype.toString.call(value) === '[object Array]';
   }
