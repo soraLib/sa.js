@@ -1,0 +1,1 @@
+export type PredicateCallback<T> = (value: T) => unknown;

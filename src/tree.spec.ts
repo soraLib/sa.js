@@ -1,0 +1,39 @@
+import { findNode, findTreeNode, TreeNode } from '.';
+
+describe('Tree', () => {
+  it('find tree node test 1', () => {
+    const tree: TreeNode[] = [{
+      id: 1,
+      children: [{
+        id: 2
+      }, {
+        id: 3
+      }]
+    }, {
+      id: 5,
+    }];
+
+    expect(findTreeNode(tree, node => node.id === 3)?.id).toBe(3);
+    expect(findTreeNode(tree, node => node.id === 5)?.id).toBe(5);
+    expect(findTreeNode(tree, 'id', 3)?.id).toBe(3);
+    expect(findTreeNode(tree, 'id', 5)?.id).toBe(5);
+    expect(findTreeNode(tree, node => node.id === 4)?.id).toBe(undefined);
+    expect(findTreeNode(tree, 'id', 4)?.id).toBe(undefined);
+  });
+
+  it('find node test 2', () => {
+    const node = {
+      id: 1,
+      children: [{
+        id: 2
+      }, {
+        id: 3
+      }]
+    };
+
+    expect(findNode(node, n => n.id === 3)?.id).toBe(3);
+    expect(findNode(node, 'id', 3)?.id).toBe(3);
+    expect(findNode(node, n => n.id === 4)?.id).toBe(undefined);
+    expect(findNode(node, 'id', 4)?.id).toBe(undefined);
+  });
+});

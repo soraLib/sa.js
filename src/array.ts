@@ -1,8 +1,9 @@
 import { isArray } from ".";
+import { PredicateCallback } from "./types";
 
 export namespace Array {
   /** remove the elements that meet the condition specified in a callback function */
-  export function remove<T>(array: T[], predicate: (value: T) => unknown): T[];
+  export function remove<T>(array: T[], predicate: PredicateCallback<T>): T[];
   /** remove the elements from given start location */
   export function remove<T>(array: T[], index: number, length?: number): T[];
   /** remove the elements of given index array */
