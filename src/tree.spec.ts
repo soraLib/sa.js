@@ -1,8 +1,8 @@
 import { findNode, findTreeNode, TreeNode } from '.';
 
 describe('Tree', () => {
-  it('find tree node test 1', () => {
-    const tree: TreeNode[] = [{
+  it('find tree node test', () => {
+    const tree = [{
       id: 1,
       children: [{
         id: 2
@@ -21,7 +21,7 @@ describe('Tree', () => {
     expect(findTreeNode(tree, 'id', 4)?.id).toBe(undefined);
   });
 
-  it('find node test 2', () => {
+  it('find node test', () => {
     const node = {
       id: 1,
       children: [{
