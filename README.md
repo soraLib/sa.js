@@ -8,6 +8,8 @@
 ![JS](https://img.shields.io/badge/JS-232323?logo=javascript)
 ![JS](https://img.shields.io/badge/TS-fcfcfc?logo=typescript)
 
+![sugar-sajs](./sugar-sajs.png)
+
 Typescript library provide many sweet tools.
 
 [Documentation](https://soralib.github.io/sa.js/modules.html)
