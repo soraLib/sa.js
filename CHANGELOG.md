@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0-pre.4 (2021-12-19)
+
+- `tree` add remove tree node sugar.
+
 ## 1.0.0-pre.3 (2021-12-18)
 
 - `tree` add find tree node sugar.
