@@ -58,3 +58,33 @@ export function findNode<T extends TreeNode>(node: T, arg1: keyof T | PredicateC
 
   return findNodeHelper(node, predicate);
 }
+
+/** find remove node recursively */
+function removeNodeHelper<T extends TreeNode>(node: T, predicate: PredicateCallback<T>, tree: T[], index: number): T | undefined {
+  if(predicate(node)) {
+    return tree.splice(index, 1)[0];
+  }
+
+  if(node.children?.length) {
+    for(let i = 0; i < node.children.length; i++) {
+      const removeChildNode = removeNodeHelper(<T>node.children[i], predicate, <T[]>node.children, i);
+
+      if(removeChildNode) return removeChildNode;
+    }
+  }
+}
+
+/** remove fisrt node that meet the condition specified in a callback function in tree */
+export function removeTreeNode<T extends TreeNode>(tree: T[], predicate: PredicateCallback<T>): T | undefined
+/** remove first node in tree by given key and value */
+export function removeTreeNode<T extends TreeNode>(tree: T[], key: keyof T, value: T[keyof T]): T | undefined
+/** remove first node in tree */
+export function removeTreeNode<T extends TreeNode>(tree: T[], arg1: keyof T | PredicateCallback<T>, arg2?: T[keyof T]): T | undefined {
+  const predicate = createPredicate(arg1, arg2);
+
+  for(let i = 0; i < tree.length; i++) {
+    const removeNode = removeNodeHelper(tree[i], predicate, tree, i);
+
+    if(removeNode) return removeNode;
+  }
+}
