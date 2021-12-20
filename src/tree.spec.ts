@@ -60,5 +60,6 @@ describe('Tree', () => {
     }]);
 
     expect(removeTreeNode(tree, 'id', 5)?.id).toBe(5);
+    expect(removeTreeNode(tree, 'id', 6)?.id).toBe(undefined);
   });
 });

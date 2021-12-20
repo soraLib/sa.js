@@ -3,3 +3,4 @@ export * from './wrapper';
 export * from './url';
 export * from './validate';
 export * from './tree';
+export * from './clone';
