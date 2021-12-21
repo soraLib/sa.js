@@ -6,7 +6,11 @@ export default {
   output: {
     file: './dist/sa.js',
     format: 'umd',
-    name: 'sa'
+    name: 'sa',
+    globals: {
+      'lodash-es': 'lodash-es'
+    }
   },
+  external: ['lodash-es'],
   plugins: [typescript(), resolve()]
 };
