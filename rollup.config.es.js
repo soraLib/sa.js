@@ -6,7 +6,11 @@ export default {
   output: {
     file: './sa.mjs',
     format: 'es',
-    name: 'sa'
+    name: 'sa',
+    globals: {
+      'lodash-es': 'lodash-es'
+    }
   },
+  external: ['lodash-es'],
   plugins: [typescript(), resolve()]
 };
