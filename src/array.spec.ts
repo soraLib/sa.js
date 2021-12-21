@@ -1,4 +1,4 @@
-import { Array } from '.';
+import { Array } from './array';
 
 describe('Arrays', () => {
   it('remove predicate test', () => {

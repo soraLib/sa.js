@@ -1,4 +1,4 @@
-import { UrlSplit } from '.';
+import { UrlSplit } from './url';
 import { Url } from './url';
 
 describe('url split', () => {

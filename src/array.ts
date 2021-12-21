@@ -1,4 +1,4 @@
-import { isArray } from ".";
+import { isArray } from "./validate";
 import { PredicateCallback } from "./types";
 
 export namespace Array {

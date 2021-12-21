@@ -1,4 +1,4 @@
-import { findNode, findTreeNode, removeTreeNode, TreeNode } from '.';
+import { findNode, findTreeNode, removeTreeNode } from './tree';
 
 describe('Tree', () => {
   it('find tree node test', () => {
