@@ -1,6 +1,10 @@
 # Changelog
 
+## 1.0.0-pre.7 (2021-12-21)
+
 ## 1.0.0-pre.6 (2021-12-21)
+
+- Fix `Wrapper`'s optional and nullish syntax with babel plugins. 
 
 ### Fixes
 
