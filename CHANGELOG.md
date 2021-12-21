@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.0-pre.6 (2021-12-21)
+
+### Fixes
+
+- Fix `build` use lodash-es instead of lodash. 
+- Fix `build` add rollup external lodash-es.
+- Fix `rollup` circular dependency.
+
 ## 1.0.0-pre.5 (2021-12-20)
 
 ### Features
