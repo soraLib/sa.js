@@ -1,6 +1,6 @@
 import { PickObject } from "./types";
 
-import { isEqual, cloneDeep } from "lodash";
+import { cloneDeep, isEqual } from "lodash-es";
 
 type ObjectLike = {
   [key: string]: unknown;
