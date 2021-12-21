@@ -1,4 +1,4 @@
-import { isArray, isEmail, isIdCard, isJson, isLowerCase, isPhone, isStartWithUpperCase, isUpperCase, isUrl } from '.';
+import { isArray, isEmail, isIdCard, isJson, isLowerCase, isPhone, isStartWithUpperCase, isUpperCase, isUrl } from './validate';
 
 describe('validate', () => {
   it('is url test', () => {
