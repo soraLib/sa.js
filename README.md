@@ -15,3 +15,14 @@
 Typescript library provide many sweet tools.
 
 [Documentation](https://soralib.github.io/sa.js/modules.html)
+
+## Install
+
+npm
+```sh
+npm i sugar-sajs
+```
+yarn
+```sh
+yarn add sugar-sajs
+```
