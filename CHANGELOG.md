@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0-pre.8 (2021-12-22)
+
+### Features
+
+- `Math` add factorial sugar.
+- `Math` add permutations sugar.
+- `Math` add combinations sugar.
+- `Num` add reverse number sugar.
+- `Num` add safe division sugar.
+
 ## 1.0.0-pre.7 (2021-12-21)
 
 ### Fixes
