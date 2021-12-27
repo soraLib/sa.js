@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.9 (2021-12-27)
+
+### Features
+
+- `Array` add swap elements sugar.
+
 ## 1.0.0-pre.8 (2021-12-22)
 
 ### Features
