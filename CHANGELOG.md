@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.10 (2021-12-30)
+
+### Features
+
+- `Chain` add chain object sugar.
+- 
 ## 1.0.0-pre.9 (2021-12-27)
 
 ### Features
