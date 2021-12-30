@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.11 (2021-12-30)
+
+### Fixes
+
+- `Fix` chain export.
+
 ## 1.0.0-pre.10 (2021-12-30)
 
 ### Features
