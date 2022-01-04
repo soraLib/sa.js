@@ -4,7 +4,7 @@ type PickFunctionKey<T extends object, K extends keyof T = keyof T> = K extends 
 type ChainFunctionObject<T extends object> = Pick<T, PickFunctionKey<T>>;
 
 export type ChainedObject<T extends ChainFunctionObject<T>> = {
-  [key in keyof T]: (...p: Parameters<T[key]>) => T;
+  [key in keyof T]: (...p: Parameters<T[key]>) => ChainedObject<T>;
 };
 
 /**
@@ -36,7 +36,7 @@ export function chain<T extends object>(source: T) {
 
   for(const [key, value] of Object.entries(combinedSource)) {
     if(typeof value === 'function' && source?.constructor !== value) {
-      const chainHeler = createChainHelper(combinedSource, value);
+      const chainHeler = createChainHelper(source, chainedSource, value);
 
       Reflect.set(chainedSource, key, chainHeler);
     }
@@ -45,10 +45,10 @@ export function chain<T extends object>(source: T) {
   return chainedSource;
 }
 
-function createChainHelper(source: object, func: (...args: unknown[]) => unknown) {
+function createChainHelper(source: object, chain: object, func: (...args: unknown[]) => unknown) {
   return (...args: unknown[]) => {
     func.call(source, ...args);
 
-    return source;
+    return chain;
   }
 }
