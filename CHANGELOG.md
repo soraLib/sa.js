@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.12 (2022-01-04)
+
+### Features
+
+- add `Chain` class support.
+
 ## 1.0.0-pre.11 (2021-12-30)
 
 ### Fixes

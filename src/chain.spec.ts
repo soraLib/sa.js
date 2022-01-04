@@ -22,4 +22,26 @@ describe('Chain', () => {
     chainedSource.increase(4).decrease(1);
     expect(source.count).toBe(3);
   });
+
+  it('chain class test', () => {
+    class Count {
+      count: number;
+      constructor(count: number) { 
+        this.count = count;
+      }
+      increase(count?: number) {
+        this.count += (count ?? 1);
+      }
+      decrease(count?: number) {
+        this.count -= (count ?? 1);
+      }
+    }
+
+    const source = new Count(1);
+
+    const chainedSouce = chain(source);
+    chainedSouce.increase(2).decrease(1);
+
+    expect(source.count).toBe(2);
+  })
 });

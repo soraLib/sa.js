@@ -24,9 +24,19 @@ export type ChainedObject<T extends ChainFunctionObject<T>> = {
 export function chain<T extends object>(source: T) {
   const chainedSource = {} as ChainedObject<ChainFunctionObject<T>>;
 
-  for(const [key, value] of Object.entries(source)) {
-    if(typeof value === 'function') {
-      const chainHeler = createChainHelper(source, value);
+  const proto = Object.getPrototypeOf(source);
+
+  let combinedSource: T = source;
+
+  if(proto) {
+    for(let key of Object.getOwnPropertyNames(proto)) {
+      Reflect.set(combinedSource, key, proto[key]);
+    }
+  }
+
+  for(const [key, value] of Object.entries(combinedSource)) {
+    if(typeof value === 'function' && source?.constructor !== value) {
+      const chainHeler = createChainHelper(combinedSource, value);
 
       Reflect.set(chainedSource, key, chainHeler);
     }
