@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.13 (2022-01-04)
+
+### Fixes
+
+- fix `Chain` return void type.
+
 ## 1.0.0-pre.12 (2022-01-04)
 
 ### Features
