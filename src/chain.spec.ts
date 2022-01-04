@@ -40,7 +40,7 @@ describe('Chain', () => {
     const source = new Count(1);
 
     const chainedSouce = chain(source);
-    chainedSouce.increase(2).decrease(1);
+    chainedSouce.decrease(1).increase(1).increase(2).decrease(2).increase(1);
 
     expect(source.count).toBe(2);
   })
