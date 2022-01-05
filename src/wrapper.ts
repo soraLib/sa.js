@@ -1,8 +1,10 @@
 /**
- * @description create a Wrapper class to help you splice xml.
- * @param attrs attributes on xml root
- * @param content wrapped inner content
- * @example const xml = new Wrapper("some content").wrap('ctrl', { id: 20, name: "hfutsora"}) then you can get the xml `<ctrl id="20" name="hfutsora">some content</ctrl>`
+ * splice xml helper
+ * @example 
+ * 
+ * new Wrapper("inner content").wrap('ctrl', { id: 20, name: "sora"}) 
+ * 
+ * // => `<ctrl id="20" name="sora">inner content</ctrl>`
  */
 export class Wrapper {
   private _xml: string;
