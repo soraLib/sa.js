@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.15 (2022-01-07)
+
+### Features
+
+- add `Type` deep parital.
+
 ## 1.0.0-pre.14 (2022-01-05)
 
 ### Features
