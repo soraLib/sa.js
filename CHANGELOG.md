@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.17 (2022-01-10)
+
+### Fixes
+
+- Fix `Function` export.
+
 ## 1.0.0-pre.16 (2022-01-10)
 
 ### Features
