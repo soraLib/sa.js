@@ -7,5 +7,6 @@ export * from './snapshot';
 export * from './Math';
 export * from './chain';
 export * from './object';
+export * from './function';
 
 export * from './types';
