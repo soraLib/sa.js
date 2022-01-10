@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.16 (2022-01-10)
+
+### Features
+
+- add `Function` create delay function util.
+
 ## 1.0.0-pre.15 (2022-01-07)
 
 ### Features
