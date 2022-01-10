@@ -26,3 +26,17 @@ yarn
 ```sh
 yarn add sugar-sajs
 ```
+
+## Use
+
+```typescript
+import * as Sa from 'sugar-sajs';
+
+Sa.factorial(2);
+```
+
+```typescript
+import { factorial } from 'sugar-sajs';
+
+factorial(2);
+```
