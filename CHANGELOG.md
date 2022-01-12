@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.18 (2022-01-12)
+
+### Fixes
+
+- Fix `Snapshot` diff props with empty value.
+
 ## 1.0.0-pre.17 (2022-01-10)
 
 ### Fixes
