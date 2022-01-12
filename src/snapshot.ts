@@ -15,7 +15,7 @@ export function diff<T extends ObjectLike, D extends ObjectLike>(source: T, othe
       Reflect.set(patch, key, other[key]);
     }
   }
-  
+
   return patch;
 }
 
@@ -24,7 +24,7 @@ export function pickDiffPatch<T extends ObjectLike, D extends ObjectLike>(source
   const patchProps = <PickObject<T, D>>{};
 
   for(const key in props) {
-    if(Reflect.get(source, key)) {
+    if(Reflect.has(source, key)) {
       Reflect.set(patchProps, key, source[key]);
     }
   }
