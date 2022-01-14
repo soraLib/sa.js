@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.19 (2022-01-14)
+
+### Features
+
+- add `Promise` promiseAll util.
+
 ## 1.0.0-pre.18 (2022-01-12)
 
 ### Fixes
