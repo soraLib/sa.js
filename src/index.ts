@@ -8,5 +8,6 @@ export * from './Math';
 export * from './chain';
 export * from './object';
 export * from './function';
+export * from './promise';
 
 export * from './types';
