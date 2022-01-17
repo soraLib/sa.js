@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.20 (2022-01-17)
+
+### Features
+
+- add `Promise` promiseAll predicate callback support.
+
 ## 1.0.0-pre.19 (2022-01-14)
 
 ### Features
