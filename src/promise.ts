@@ -10,7 +10,18 @@ type PromiseArrayValues<T extends readonly (() => unknown)[] | []> = T extends r
  * 
  * // => [1, 2]
  */
-export async function promiseAll<T extends ((readonly (() => unknown)[]) | [])>(tasks: T,　retry = 0): Promise<PromiseArrayValues<T>> {
+export async function promiseAll<T extends ((readonly (() => unknown)[]) | [])>(tasks: T,　retry?: number): Promise<PromiseArrayValues<T>>;
+/**
+ * promise all with each task could retry in multiple times.
+ * 
+ * @example
+ * 
+ * promiseAll([() => 1, () => new Promise((resolve) => resolve(2))], () => true);
+ * 
+ * // => [1, 2]
+ */
+export async function promiseAll<T extends ((readonly (() => unknown)[]) | [])>(tasks: T, predicate: () => unknown): Promise<PromiseArrayValues<T>>;
+export async function promiseAll<T extends ((readonly (() => unknown)[]) | [])>(tasks: T,　retry?: number | (() => unknown)): Promise<PromiseArrayValues<T>> {
   return new Promise((resolve, reject) => {
     const promiseResults: PromiseArrayValues<T> = <any>[];
     let iteratorIndex = 0;
@@ -35,9 +46,21 @@ export async function promiseAll<T extends ((readonly (() => unknown)[]) | [])>(
             }
           })
           .catch(err => {
-            if (retryTimes < retry) {
-              retryTimes += 1;
-              promiseTask(task);
+            if(retry) {
+              if(typeof retry === 'number') {
+                if (retryTimes < retry) {
+                  retryTimes += 1;
+                  promiseTask(task);
+                } else {
+                  reject(err);
+                }
+              } else {
+                if(retry()) {
+                  promiseTask(task);
+                } else {
+                  reject(err);
+                }
+              }
             } else {
               reject(err);
             }
