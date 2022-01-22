@@ -1,7 +1,4 @@
-
-type PickFunctionKey<T extends object, K extends keyof T = keyof T> = K extends any ? T[K] extends Function ? K : never : never;
-
-type ChainFunctionObject<T extends object> = Pick<T, PickFunctionKey<T>>;
+type ChainFunctionObject<T extends object> = Pick<T, {[P in keyof T]: T[P] extends Function ? P : never }[keyof T]>;
 
 export type ChainedObject<T extends ChainFunctionObject<T>> = {
   [key in keyof T]: (...p: Parameters<T[key]>) => ChainedObject<T>;
