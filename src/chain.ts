@@ -1,6 +1,6 @@
-type ChainFunctionObject<T extends object> = Pick<T, {[P in keyof T]: T[P] extends Function ? P : never }[keyof T]>;
+import { PickRestrictedObject } from "./types";
 
-export type ChainedObject<T extends ChainFunctionObject<T>> = {
+export type ChainedObject<T extends PickRestrictedObject<T, Function>> = {
   [key in keyof T]: (...p: Parameters<T[key]>) => ChainedObject<T>;
 };
 
@@ -19,7 +19,7 @@ export type ChainedObject<T extends ChainFunctionObject<T>> = {
  * // => 2
  */
 export function chain<T extends object>(source: T) {
-  const chainedSource = {} as ChainedObject<ChainFunctionObject<T>>;
+  const chainedSource = {} as ChainedObject<PickRestrictedObject<T, Function>>;
 
   const proto = Object.getPrototypeOf(source);
 
