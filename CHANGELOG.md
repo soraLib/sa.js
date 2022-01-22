@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.21 (2022-01-22)
+
+### Features
+
+- add `PickRestrictedObject` type.
+
 ## 1.0.0-pre.20 (2022-01-17)
 
 ### Features
