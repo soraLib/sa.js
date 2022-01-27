@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.22 (2022-01-27)
+
+### Fixes
+
+- fix `Array` predicate remove can't change the origin array.
+
 ## 1.0.0-pre.21 (2022-01-22)
 
 ### Features

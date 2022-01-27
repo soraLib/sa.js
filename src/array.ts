@@ -11,7 +11,13 @@ export namespace Array {
   /** remove elements in array */
   export function remove<T>(arr: T[], arg1: PredicateCallback<T> | number | number[], arg2 = 1): T[] {
     if (typeof arg1 === 'function') {
-      return arr.filter(item => !arg1(item));
+      for(let i = arr.length - 1; i >= 0; i--) {
+        if(arg1(arr[i])) {
+          arr.splice(i, 1);
+        }
+      }
+      
+      return arr;
     } 
 
     if (isArray(arg1)) {

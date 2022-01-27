@@ -3,7 +3,9 @@ import { Array } from './array';
 describe('Arrays', () => {
   it('remove predicate test', () => {
     const arr = [1, 2, 3, 4];
-    expect(Array.remove(arr, item => item === 2)).toEqual([1, 3, 4]);
+    const removed = Array.remove(arr, item => item === 2);
+    expect(arr).toEqual([1, 3, 4]);
+    expect(removed).toEqual([1, 3, 4]);
   });
 
   it('remove index test', () => {
