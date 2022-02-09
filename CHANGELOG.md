@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.23 (2022-02-09)
+
+### Features
+
+- add `Type` PickUnion.
+
 ## 1.0.0-pre.22 (2022-01-27)
 
 ### Fixes
