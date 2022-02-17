@@ -20,3 +20,25 @@ export type PickRestrictedObject<T extends object, R extends unknown> = Pick<T, 
  * // => { a: number } | { b: string }
  */
 export type PickUnion<T, K extends keyof T> = K extends K ? { [P in K]: T[P] } : never;
+
+
+export type AddStringPrefix<T, P extends string> = `${P}${Capitalize<T extends string ? T : never>}`;
+
+/**
+ * add prefix
+ * 
+ * @example
+ * 
+ * AddPrefix<{ ob: string, cb: number }, 'My'>
+ * 
+ * // => { MyOb: string, MyCb: number }
+ * 
+ * AddPrefix<'func', 'My'>
+ * 
+ * // => 'MyFunc'
+ */
+export type AddPrefix<T, D extends string> = T extends object
+  ? {
+      [P in keyof T as AddStringPrefix<P, D>]: T[P];
+    }
+  : AddStringPrefix<T, D>;
