@@ -1,6 +1,6 @@
 {
   "name": "sugar-sajs",
-  "version": "1.0.0-pre.23",
+  "version": "1.0.0-pre.24",
   "description": "Typescript sugar library.",
   "main": "./cjs/index.js",
   "module": "./esm/index.mjs",
