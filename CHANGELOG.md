@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.24 (2022-02-17)
+
+### Features
+
+- add `Type` AddPrefix.
+
 ## 1.0.0-pre.23 (2022-02-09)
 
 ### Features
