@@ -42,3 +42,15 @@ export type AddPrefix<T, D extends string> = T extends object
       [P in keyof T as AddStringPrefix<P, D>]: T[P];
     }
   : AddStringPrefix<T, D>;
+
+
+/**
+ * partial with optional
+ * 
+ * @example
+ * 
+ * PartialOptional<{ a: string; b: number }, 'a'>
+ * 
+ * // => { a?: string; b: number }
+ */
+export type PartialOptional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
