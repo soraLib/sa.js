@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.25 (2022-02-21)
+
+### Features
+
+- add `Type` PartialOptional.
+
 ## 1.0.0-pre.24 (2022-02-17)
 
 ### Features
