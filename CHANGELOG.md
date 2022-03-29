@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.0-pre.26 (2022-03-29)
+
+### Fixes
+
+- remove `Tree`'s TreeNode string key type.
+
+### Features
+
+- add `Type` PartialOptional.
+
 ## 1.0.0-pre.25 (2022-02-21)
 
 ### Features

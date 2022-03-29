@@ -7,7 +7,8 @@ describe('Tree', () => {
       children: [{
         id: 2
       }, {
-        id: 3
+        id: 3,
+        children: []
       }]
     }, {
       id: 5,
@@ -25,7 +26,8 @@ describe('Tree', () => {
     const node = {
       id: 1,
       children: [{
-        id: 2
+        id: 2,
+        children: []
       }, {
         id: 3
       }]
@@ -41,9 +43,10 @@ describe('Tree', () => {
     const tree = [{
       id: 1,
       children: [{
-        id: 2
+        id: 2,
       }, {
-        id: 3
+        id: 3,
+        children: []
       }]
     }, {
       id: 5,
