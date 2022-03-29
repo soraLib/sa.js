@@ -1,7 +1,6 @@
 import { PredicateCallback } from "./types";
 
 export type TreeNode = {
-  [key: string]: unknown;
   children?: TreeNode[];
 }
 
