@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.27 (2022-04-02)
+
+### Features
+
+- add `Equal` multiOrEqual and multiAndEqual.
+
 ## 1.0.0-pre.26 (2022-03-29)
 
 ### Fixes
