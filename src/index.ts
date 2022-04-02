@@ -9,5 +9,6 @@ export * from './chain';
 export * from './object';
 export * from './function';
 export * from './promise';
+export * from './equal';
 
 export * from './types';
