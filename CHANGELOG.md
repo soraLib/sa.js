@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.28 (2022-04-22)
+
+### Features
+
+- add `Object` hasSubset.
+
 ## 1.0.0-pre.27 (2022-04-02)
 
 ### Features
