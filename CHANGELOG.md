@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-pre.29 (2022-05-17)
+
+### Fixes
+
+- fix esm etc modules.
+
 ## 1.0.0-pre.28 (2022-04-22)
 
 ### Features
