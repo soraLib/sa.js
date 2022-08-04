@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0 (2022-08-04)
+
+### Features
+
+- `Wrapper` adds attr directly when value is null.
+
 ## 1.0.0-pre.29 (2022-05-17)
 
 ### Fixes
