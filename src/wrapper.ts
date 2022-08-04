@@ -44,7 +44,8 @@ function generateAttributesString(attrs: {}) {
   let str = '';
 
   for (const [key, value] of Object.entries(attrs)) {
-    str += ` ${key}="${value ?? ''}"`;
+    // Adds attr directly when value is null.
+    str += value === null ? ` ${key}` : ` ${key}="${value ?? ''}"`;
   }
 
   return str;

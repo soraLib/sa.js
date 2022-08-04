@@ -23,6 +23,13 @@ describe('wrapper driver test', () => {
     expect(wapperedXml.toString()).toBe('<p id="1" name="">wrappered content</p>');
   });
 
+  it('wrap with null', () => {
+    const wrapper = new Wrapper('wrappered content');
+    const wapperedXml = wrapper.wrap('temp', { '#header': null });
+
+    expect(wapperedXml.value()).toBe('<temp #header>wrappered content</temp>');
+  })
+
   it('append', () => {
     const wrapper = new Wrapper();
     wrapper.append('p', { id: 1, name: 'sora' }, null!);

@@ -5,7 +5,7 @@ export type ChainedObject<T extends PickRestrictedObject<T, Function>> = {
 };
 
 /**
- * create chain with functions return source.
+ * Creates a chain with functions.
  * 
  * @example
  * 
