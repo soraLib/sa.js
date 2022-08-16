@@ -42,7 +42,7 @@ export function deepAssign<A extends object, B extends object>(source: A, target
   for(const [key, value] of Object.entries(target)) {
     const sourceValue = (source as any)[key]
     if(typeof value === 'object' && typeof sourceValue === 'object') {
-      deepAssign<object, object>(sourceValue, value)
+      deepAssign(sourceValue, value)
 
       continue
     }
