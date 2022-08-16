@@ -1,3 +1,4 @@
+import { DeepAssign } from './types';
 /**
  * set object values, shallow copy
  * 
@@ -26,4 +27,28 @@ export function setObjectValues<T extends object>(target: T, values: Partial<T>)
  */
 export function hasSubset<T extends object>(target: T, sub: object): boolean {
   return Object.entries(sub).every(([key, value]) => target[key as keyof T] === value);
+}
+
+/**
+ * assign recursively, shallow copy
+ * 
+ * @example
+ * 
+ * deepAssign({ a: { c: 2 }, b: 1 }, { a: { c: 3 } })
+ * 
+ * // => { a: { c: 3 }, b: 1 }
+ */
+export function deepAssign<A extends object, B extends object>(source: A, target: B): DeepAssign<A, B> {
+  for(const [key, value] of Object.entries(target)) {
+    const sourceValue = (source as any)[key]
+    if(typeof value === 'object' && typeof sourceValue === 'object') {
+      deepAssign<object, object>(sourceValue, value)
+
+      continue
+    }
+
+    (source as any)[key] = value
+  }
+
+  return source as any
 }
