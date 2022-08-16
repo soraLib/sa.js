@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 (2022-08-16)
+
+### Features
+
+- add `Object` deepAssign.
+
 ## 1.1.0 (2022-08-04)
 
 ### Features
