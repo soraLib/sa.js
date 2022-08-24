@@ -52,3 +52,17 @@ export function deepAssign<A extends object, B extends object>(source: A, target
 
   return source as any
 }
+
+/**
+ * Assign to source with predicate.
+ *
+ * @example
+ *
+ * ```ts
+ * assignWithPredicate({}, [{ a: 1 }, () => true], [{ b: 2 }, () => false])
+ *
+ * // => { a: 1 }
+ * ```
+ */
+export const assignWithPredicate = <T extends object>(source: T, ...dps: [T, () => unknown][]): T =>
+  dps.reduce((prev, dp) => dp[1]() ? Object.assign(prev, dp[0]) : prev, source);

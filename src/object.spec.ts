@@ -1,4 +1,4 @@
-import { hasSubset, setObjectValues, deepAssign } from './object';
+import { hasSubset, setObjectValues, deepAssign, assignWithPredicate } from './object';
 
 describe('Object', () => {
   it('set values test', () => {
@@ -26,4 +26,8 @@ describe('Object', () => {
     expect(deepAssign({ a: { b: 2 } }, { a: { b: 3 } })).toEqual({ a: { b: 3 } })
     expect(deepAssign({ a: { c: 2 }, b: 1 }, { a: { c: 3 } })).toEqual({ a: { c: 3 }, b: 1 })
   })
+
+  it('assign predicate data', () => {
+    expect(assignWithPredicate({}, [{ a: 1 }, () => true], [{ b: 2 }, () => false])).toEqual({ a: 1 });
+  });
 });
