@@ -52,26 +52,26 @@ export function createDiffPatch<T extends ObjectLike, D extends ObjectLike>(sour
  */
 export class Snapshot<T extends ObjectLike> {
   private _source: T;
-  private _snapshots: T[];
+  readonly snapshots: T[];
   private _index: number;
 
   constructor(source: T) {
     this._source = source;
-    this._snapshots = [];
+    this.snapshots = [];
     this._index = -1;
     this.takeSnapshot();
   }
 
   /** push new snaphsot */
   takeSnapshot() {
-    this._snapshots.push(cloneDeep(this._source));
+    this.snapshots.push(cloneDeep(this._source));
     this._index += 1;
 
     return this;
   }
 
   /** get diff patch between latest source and snapshot */
-  getDiffPatch(source = this._snapshots[this._index], other = this._source) {
+  getDiffPatch(source = this.snapshots[this._index], other = this._source) {
     return createDiffPatch(source, other);
   }
 }

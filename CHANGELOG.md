@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2 (2022-09-20)
+
+### Features
+
+- set `Snapshot` snapshots as a public field.
+
 ## 1.1.1 (2022-08-16)
 
 ### Features
