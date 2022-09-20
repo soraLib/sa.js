@@ -105,16 +105,3 @@ export type DeepAssignWith<T, U extends unknown[]> = T extends ObjectLike
   : never
 
 export type DeepAssign<A, B> = A extends ObjectLike ? B extends ObjectLike ? DeepAssignWith<A, SplitObject<B>> : A : never
-
-
-type User = {
-  name: string
-  age: number
-}
-
-declare function fn(u: User | SplitObject<User>[number])
-
-
-fn({ age: 1 })
-fn({ name: 'sora' })
-fn({ age: 1, name: 'sora' })
