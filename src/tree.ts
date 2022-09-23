@@ -87,3 +87,14 @@ export function removeTreeNode<T extends TreeNode>(tree: T[], arg1: keyof T | Pr
     if(removeNode) return removeNode;
   }
 }
+
+/* DFS use effect with tree node */
+export function useTreeNode<T extends TreeNode>(node: T, effect: (node: T) => void): void {
+  effect(node);
+
+  if(node.children?.length) {
+    for(const child of node.children) {
+      useTreeNode(child as T, effect);
+    }
+  }
+}
