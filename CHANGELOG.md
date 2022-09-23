@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.4 (2022-09-23)
+
+### Features
+
+- add `Tree` use tree node effect.
+
 ## 1.1.3 (2022-09-20)
 
 ### Fixes

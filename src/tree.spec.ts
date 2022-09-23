@@ -1,4 +1,4 @@
-import { findNode, findTreeNode, removeTreeNode } from './tree';
+import { findNode, findTreeNode, removeTreeNode, useTreeNode } from './tree';
 
 describe('Tree', () => {
   it('find tree node test', () => {
@@ -65,4 +65,34 @@ describe('Tree', () => {
     expect(removeTreeNode(tree, 'id', 5)?.id).toBe(5);
     expect(removeTreeNode(tree, 'id', 6)?.id).toBe(undefined);
   });
+
+  it('effect', () => {
+    const node = {
+      id: 1,
+      value: -1,
+      children: [{
+        id: 2,
+        value: -2,
+      }, {
+        id: 3,
+        value: -3,
+        children: []
+      }]
+    };
+
+    useTreeNode(node, n => n.value = Math.abs(n.value))
+
+    expect(node).toEqual({
+      id: 1,
+      value: 1,
+      children: [{
+        id: 2,
+        value: 2,
+      }, {
+        id: 3,
+        value: 3,
+        children: []
+      }]
+    })
+  })
 });
