@@ -33,9 +33,10 @@ describe('url split', () => {
   });
 
   it('compose root and querys', () => {
-    const split = { root: '/root', querys: { name: 'sora' } };
+    const split = { root: '/root', querys: { name: 'sora', age: 18 } };
 
-    expect(Url.compose(split)).toBe('/root?name=sora');
+    expect(Url.compose(split)).toBe('/root?name=sora&age=18');
+    expect(Url.compose(split, '#')).toBe('/root?name=sora#age=18');
   });
 
   it('compose width empty split', () => {

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.5 (2022-09-26)
+
+### Features
+
+- add `Url` compose with splitter.
+
 ## 1.1.4 (2022-09-23)
 
 ### Features

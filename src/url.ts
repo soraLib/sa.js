@@ -33,15 +33,15 @@ export namespace Url {
   }
 
   /** compose root into url */
-  export function compose(split: Pick<UrlSplit, 'root'>): string;
+  export function compose(split: Pick<UrlSplit, 'root'>, splitter?: string): string;
   /** compose querys into url */
-  export function compose(split: Pick<UrlSplit, 'querys'>): string;
+  export function compose(split: Pick<UrlSplit, 'querys'>, splitter?: string): string;
   /** compose root path and querys into url */
-  export function compose(split: UrlSplit): string;
+  export function compose(split: UrlSplit, splitter?: string): string;
   /** compose root path and querys into url */
-  export function compose(split: Partial<UrlSplit>) {
+  export function compose(split: Partial<UrlSplit>, splitter = '&') {
     const root = split.root ?? '';
-    const querys = split.querys ? Object.entries(split.querys).map(([key, value]) => `${key}=${value}`).join('') : '';
+    const querys = split.querys ? Object.entries(split.querys).map(([key, value]) => `${key}=${value}`).join(splitter) : '';
 
     return `${root}${(!split.querys || !split.root) ? '' : '?'}${querys}`
   }
