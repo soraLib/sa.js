@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.6 (2022-12-01)
+
+### Features
+
+- add `Style` add unit.
+
 ## 1.1.5 (2022-09-26)
 
 ### Features
